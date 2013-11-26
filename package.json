@@ -1,7 +1,7 @@
 {
   "name": "consumable",
   "version": "0.0.1",
-  "author": "Francesco Mari <mari.francesco@gmail.com",
+  "author": "Francesco Mari <mari.francesco@gmail.com>",
   "license": "MIT",
   "main": "consumable",
   "scripts": {

@@ -1,0 +1,20 @@
+{
+  "name": "consumable",
+  "version": "0.0.1",
+  "author": "Francesco Mari <mari.francesco@gmail.com",
+  "license": "MIT",
+  "main": "consumable",
+  "scripts": {
+    "test": "nodeunit test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/francescomari/consumable.git"
+  },
+  "dependencies": {
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "nodeunit": "~0.8.2"
+  }
+}

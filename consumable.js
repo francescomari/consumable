@@ -52,7 +52,7 @@ function Consumable(stream) {
         // The buffer has enough data to satisfy the current task. Read the data, remove it from
         // the buffer and schedule the task's callback for execution.
 
-        var result = task.read.call(this.buffer, 0);
+        var result = task.read.call(this.buffer);
         this.buffer = this.buffer.slice(task.required);
         process.nextTick(task.callback.bind(null, null, result));
         done();
@@ -116,7 +116,9 @@ Object.keys(Buffer.prototype).forEach(function (method) {
             this.queue.push({
                 required: size, 
                 callback: done,
-                read: Buffer.prototype[method]
+                read: function () {
+                    return this[method](0);
+                }
             });
         };
     }
